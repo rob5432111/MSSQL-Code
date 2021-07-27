@@ -1,0 +1,2 @@
+﻿CREATE SCHEMA Internal AUTHORIZATION Internal_User;
+GO
