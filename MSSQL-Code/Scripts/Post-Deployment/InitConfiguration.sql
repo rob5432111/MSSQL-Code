@@ -1,12 +1,22 @@
-﻿--Initial configuration for the new tables
+﻿-----------------------------------------------------------------------------------------------
+--------------------------------Testing values for the new tables------------------------------
+-----------------------------------------------------------------------------------------------
 GO
+
+-----------------------------------------Categories--------------------------------------------
 IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Category)
 BEGIN
 	INSERT INTO [External].Category (CategoryName, CategoryDescription) 
-	VALUES ('Food', 'All kinds of food')
-	, ('Electronic', 'All kinds of electronic devices');
+	VALUES ('Food', 'All kinds of food')	
 END
 
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Category)
+BEGIN
+	INSERT INTO [External].Category (CategoryName, CategoryDescription) 
+	VALUES ('Electronic', 'All kinds of electronic devices');
+END
+
+-------------------------------------------Products-------------------------------------------
 IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Product)
 BEGIN
 	

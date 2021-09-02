@@ -87,6 +87,11 @@
     <Build Include="Tables\External\SaleDetail.sql" />
     <Build Include="Tables\External\Category.sql" />
     <Build Include="Tables\External\Customer.sql" />
+    <Build Include="Tables\Internal\Salary.sql" />
+    <Build Include="Tables\Internal\TextTemplateSql1.sql">
+      <DependentUpon>Tables\Internal\TextTemplateSql1.tt</DependentUpon>
+    </Build>
+    <None Include="Scripts\Pre-Deployment\CleanUpScript.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />
@@ -99,5 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Post-Deployment\InitConfiguration.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
   </ItemGroup>
 </Project>
