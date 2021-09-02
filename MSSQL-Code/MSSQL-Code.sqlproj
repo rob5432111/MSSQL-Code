@@ -68,6 +68,10 @@
     <Folder Include="Security\Schemas" />
     <Folder Include="Security\Logins" />
     <Folder Include="Security\Users" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Security\Roles" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Schemas\Internal.sql" />
@@ -75,8 +79,25 @@
     <Build Include="Security\Users\Internal_User.sql" />
     <Build Include="Security\Users\External_User.sql" />
     <Build Include="Security\Schemas\External.sql" />
+    <Build Include="Tables\External\Product.sql" />
+    <Build Include="Tables\Internal\AppUser.sql" />
+    <Build Include="Security\Roles\Internal_Role.sql" />
+    <Build Include="Security\Roles\External_Role.sql" />
+    <Build Include="Tables\External\Sale.sql" />
+    <Build Include="Tables\External\SaleDetail.sql" />
+    <Build Include="Tables\External\Category.sql" />
+    <Build Include="Tables\External\Customer.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="MSSQL-Code.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Post-Deployment\InitConfiguration.sql" />
   </ItemGroup>
 </Project>
