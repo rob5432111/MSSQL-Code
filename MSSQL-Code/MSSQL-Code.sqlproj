@@ -87,10 +87,7 @@
     <Build Include="Tables\External\SaleDetail.sql" />
     <Build Include="Tables\External\Category.sql" />
     <Build Include="Tables\External\Customer.sql" />
-    <Build Include="Tables\Internal\Salary.sql" />
-    <Build Include="Tables\Internal\TextTemplateSql1.sql">
-      <DependentUpon>Tables\Internal\TextTemplateSql1.tt</DependentUpon>
-    </Build>
+    <Build Include="Tables\Internal\Salary.sql" />    
     <None Include="Scripts\Pre-Deployment\CleanUpScript.sql" />
   </ItemGroup>
   <ItemGroup>
