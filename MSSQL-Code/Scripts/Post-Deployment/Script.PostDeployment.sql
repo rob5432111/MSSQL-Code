@@ -4,3 +4,4 @@ Include new scripts by referencing them as:
 */
 
 :r .\InitConfiguration.sql
+:r .\SalesExamples.sql

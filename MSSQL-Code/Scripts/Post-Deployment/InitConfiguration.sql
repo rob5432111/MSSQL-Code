@@ -4,10 +4,10 @@
 GO
 
 -----------------------------------------Categories--------------------------------------------
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Category)
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Category WHERE CategoryName = 'Smartphone')
 BEGIN
 	INSERT INTO [External].Category (CategoryName, CategoryDescription) 
-	VALUES ('Food', 'All kinds of food')	
+	VALUES ('Smartphone', 'All kinds of smartphones')	
 END
 
 IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Category)
@@ -17,35 +17,129 @@ BEGIN
 END
 
 -------------------------------------------Products-------------------------------------------
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Product)
-BEGIN
+
+DECLARE @ProductName VARCHAR(50),
+		@CategoryId INT,
+		@Status VARCHAR(25) = 'Active';
+
+--Examples of products within the category Food
+SELECT @ProductName = 'iPhone X', @CategoryId = CategoryId
+FROM [External].Category
+WHERE CategoryName = 'Smartphone';
 	
-	DECLARE @CategoryId INT,
-			@Status VARCHAR(25) = 'Active';
 
-	--Examples of products within the category Food
-	SELECT @CategoryId = CategoryId
-	FROM [External].Category
-	WHERE CategoryName = 'Food';
-
-	INSERT INTO [External].Product (ProductName, ProductPrice, CategoryId, ProductStatus)
-	VALUES ('Apple', '0.5', @CategoryId, @Status)
-	, ('Orange', '0.75', @CategoryId, @Status)
-
-	--Examples of products within the category Electronics
-	SELECT @CategoryId = CategoryId
-	FROM [External].Category
-	WHERE CategoryName = 'Electronic';
-
-	INSERT INTO [External].Product (ProductName, ProductPrice, CategoryId, ProductStatus)
-	VALUES ('SmartPhone M5', '250.05', @CategoryId, @Status)
-	, ('Keyboard', '10', @CategoryId, @Status)
-	, ('Mouse', '5', @CategoryId, @Status)
-	, ('Monitor', '120.75', @CategoryId, @Status)
-END
-
-GO
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser)
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Product WHERE ProductName = @ProductName )
 BEGIN
-	INSERT INTO [Internal].AppUser VALUES ('User 1', 0xD), ('User 2', 0xD)
+	INSERT INTO [External].Product (ProductName, ProductPrice, CategoryId, ProductStatus)
+	VALUES (@ProductName, '1000.5', @CategoryId, @Status);	
 END
+
+SET @ProductName = 'Samsung S20';
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Product WHERE ProductName = @ProductName )
+BEGIN
+	INSERT INTO [External].Product (ProductName, ProductPrice, CategoryId, ProductStatus)
+	VALUES (@ProductName, '900.75', @CategoryId, @Status)	
+END
+
+--Examples of products within the category Electronics
+SELECT @CategoryId = CategoryId
+FROM [External].Category
+WHERE CategoryName = 'Electronic';
+
+SET @ProductName = 'Monitor HD'
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Product WHERE ProductName = @ProductName )
+BEGIN
+	INSERT INTO [External].Product (ProductName, ProductPrice, CategoryId, ProductStatus)
+	VALUES (@ProductName, '250.05', @CategoryId, @Status);	
+END
+
+SET @ProductName = 'Keyboard';
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Product WHERE ProductName = @ProductName )
+BEGIN
+	INSERT INTO [External].Product (ProductName, ProductPrice, CategoryId, ProductStatus)
+	VALUES (@ProductName, '10.25', @CategoryId, @Status)	
+END
+
+SET @ProductName = 'Mouse';
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Product WHERE ProductName = @ProductName )
+BEGIN
+	INSERT INTO [External].Product (ProductName, ProductPrice, CategoryId, ProductStatus)
+	VALUES (@ProductName, '5', @CategoryId, @Status)	
+END
+
+SET @ProductName = 'Monitor SD';
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Product WHERE ProductName = @ProductName )
+BEGIN
+	INSERT INTO [External].Product (ProductName, ProductPrice, CategoryId, ProductStatus)
+	VALUES (@ProductName, '120.75', @CategoryId, @Status)	
+END
+
+-----------------------------------------App Users--------------------------------------------
+
+DECLARE @Password VARCHAR(50) = 'Password';
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser WHERE AppUserName = 'Admin 1')
+BEGIN
+	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType) 
+	VALUES ('Admin 1', 0xD, 'Admin')
+END
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser WHERE AppUserName = 'Saler 1')
+BEGIN
+	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType) 
+	VALUES ('Saler 1', 0xD, 'Saler')
+END
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser WHERE AppUserName = 'Saler 2')
+BEGIN
+	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType) 
+	VALUES ('Saler 2', 0xD, 'Saler')
+END
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser WHERE AppUserName = 'Manager 1')
+BEGIN
+	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType) 
+	VALUES ('Manager 1', 0xD, 'Manager')
+END
+GO
+
+-----------------------------------------Customers--------------------------------------------
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 1')
+BEGIN
+	INSERT INTO [External].Customer(CustomerName, CustomerIdType, CustomerOutsourceId) 
+	VALUES ('Customer 1', 'Passport', 'C000001')
+END
+GO
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 2')
+BEGIN
+	INSERT INTO [External].Customer(CustomerName, CustomerIdType, CustomerOutsourceId) 
+	VALUES ('Customer 2', 'Passport', 'C000002')
+END
+GO
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 3')
+BEGIN
+	INSERT INTO [External].Customer(CustomerName, CustomerIdType, CustomerOutsourceId) 
+	VALUES ('Customer 3', 'Passport', 'C000003')
+END
+GO
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 4')
+BEGIN
+	INSERT INTO [External].Customer(CustomerName, CustomerIdType, CustomerOutsourceId) 
+	VALUES ('Customer 4', 'Passport', 'C000004')
+END
+GO
+
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 5')
+BEGIN
+	INSERT INTO [External].Customer(CustomerName, CustomerIdType, CustomerOutsourceId) 
+	VALUES ('Customer 5', 'Passport', 'C000005')
+END
+GO

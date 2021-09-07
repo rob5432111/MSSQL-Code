@@ -72,6 +72,8 @@
     <Folder Include="Scripts\Post-Deployment" />
     <Folder Include="Scripts\Pre-Deployment" />
     <Folder Include="Security\Roles" />
+    <Folder Include="Programmability\StoredProcedures\Internal" />
+    <Folder Include="Programmability\Functions\ScalarValuedFunctions\Internal" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Schemas\Internal.sql" />
@@ -87,8 +89,11 @@
     <Build Include="Tables\External\SaleDetail.sql" />
     <Build Include="Tables\External\Category.sql" />
     <Build Include="Tables\External\Customer.sql" />
-    <Build Include="Tables\Internal\Salary.sql" />    
+    <Build Include="Tables\Internal\Salary.sql" />
     <None Include="Scripts\Pre-Deployment\CleanUpScript.sql" />
+    <Build Include="Programmability\StoredProcedures\Internal\sp_GetUser.sql" />
+    <Build Include="Programmability\StoredProcedures\Internal\sp_BestSellingProduct_Monthly.sql" />
+    <None Include="Scripts\Post-Deployment\SalesExamples.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />
