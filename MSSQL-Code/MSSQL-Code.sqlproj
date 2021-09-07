@@ -22,6 +22,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -75,6 +76,7 @@
     <Folder Include="Programmability\StoredProcedures\Internal" />
     <Folder Include="Programmability\Functions\ScalarValuedFunctions\Internal" />
     <Folder Include="Publish" />
+    <Folder Include="Synonyms" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Schemas\Internal.sql" />
@@ -96,6 +98,12 @@
     <Build Include="Programmability\StoredProcedures\Internal\sp_BestSellingProduct_Monthly.sql" />
     <None Include="Scripts\Post-Deployment\SalesExamples.sql" />
     <None Include="Scripts\Post-Deployment\SalaryExamples.sql" />
+    <Build Include="Synonyms\Product.sql" />
+    <Build Include="Synonyms\Sale.sql" />
+    <Build Include="Synonyms\SaleDetail.sql" />
+    <Build Include="Synonyms\AppUser.sql" />
+    <Build Include="Synonyms\Category.sql" />
+    <Build Include="Synonyms\Customer.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />
