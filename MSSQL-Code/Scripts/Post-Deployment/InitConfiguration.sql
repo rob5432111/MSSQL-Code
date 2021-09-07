@@ -10,7 +10,7 @@ BEGIN
 	VALUES ('Smartphone', 'All kinds of smartphones')	
 END
 
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Category)
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Category WHERE CategoryName = 'Electronic')
 BEGIN
 	INSERT INTO [External].Category (CategoryName, CategoryDescription) 
 	VALUES ('Electronic', 'All kinds of electronic devices');
