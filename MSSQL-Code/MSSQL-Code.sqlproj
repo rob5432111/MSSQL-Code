@@ -95,6 +95,7 @@
     <Build Include="Programmability\StoredProcedures\Internal\sp_GetUser.sql" />
     <Build Include="Programmability\StoredProcedures\Internal\sp_BestSellingProduct_Monthly.sql" />
     <None Include="Scripts\Post-Deployment\SalesExamples.sql" />
+    <None Include="Scripts\Post-Deployment\SalaryExamples.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />
