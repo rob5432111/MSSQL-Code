@@ -74,6 +74,7 @@
     <Folder Include="Security\Roles" />
     <Folder Include="Programmability\StoredProcedures\Internal" />
     <Folder Include="Programmability\Functions\ScalarValuedFunctions\Internal" />
+    <Folder Include="Publish" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Schemas\Internal.sql" />
@@ -106,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Post-Deployment\InitConfiguration.sql" />
+    <None Include="Publish\MSSQL-Code.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
