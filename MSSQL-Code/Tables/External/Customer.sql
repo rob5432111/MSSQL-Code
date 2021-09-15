@@ -9,7 +9,7 @@
 )
 GO
 
-CREATE UNIQUE NONCLUSTERED INDEX UNC_Customer_CustomerOutsourceId_Include
+CREATE UNIQUE NONCLUSTERED INDEX UNC_Nulls_Customer_CustomerOutsourceId_Include
 ON [External].Customer
 (
 	CustomerOutsourceId

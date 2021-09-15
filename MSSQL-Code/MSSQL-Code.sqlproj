@@ -78,6 +78,7 @@
     <Folder Include="Publish" />
     <Folder Include="Synonyms" />
     <Folder Include="Programmability\StoredProcedures\External" />
+    <Folder Include="Programmability\Functions\TableValuedFunctions\dbo" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Schemas\Internal.sql" />
@@ -107,6 +108,7 @@
     <Build Include="Programmability\StoredProcedures\External\sp_BestSeller_Quantity_Monthly_CTEExample.sql" />
     <Build Include="Programmability\StoredProcedures\External\sp_BestSeller_Money_Monthly_TempTablesExample.sql" />
     <Build Include="Programmability\Functions\ScalarValuedFunctions\dbo\svf_FormatName.sql" />
+    <Build Include="Programmability\Functions\TableValuedFunctions\dbo\tvf_FindCustomer_BadPracticeExample.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />

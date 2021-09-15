@@ -109,35 +109,35 @@ END
 GO
 
 -----------------------------------------Customers--------------------------------------------
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 1')
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerFirstName = 'Customer 1')
 BEGIN
 	INSERT INTO [External].Customer(CustomerFirstName, CustomerLastName, CustomerIdType, CustomerOutsourceId) 
 	VALUES ('Customer 1', 'LastName 1', 'Passport', 'C000001')
 END
 GO
 
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 2')
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerFirstName = 'Customer 2')
 BEGIN
 	INSERT INTO [External].Customer(CustomerFirstName, CustomerLastName, CustomerIdType, CustomerOutsourceId) 
 	VALUES ('Customer 2', 'LastName 2', 'Passport', 'C000002')
 END
 GO
 
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 3')
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerFirstName = 'Customer 3')
 BEGIN
 	INSERT INTO [External].Customer(CustomerFirstName, CustomerLastName, CustomerIdType, CustomerOutsourceId) 
 	VALUES ('Customer 3', 'LastName 3', 'Passport', 'C000003')
 END
 GO
 
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 4')
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerFirstName = 'Customer 4')
 BEGIN
 	INSERT INTO [External].Customer(CustomerFirstName, CustomerLastName, CustomerIdType, CustomerOutsourceId) 
 	VALUES ('Customer 4', 'LastName 4', 'Passport', 'C000004')
 END
 GO
 
-IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerName = 'Customer 5')
+IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [External].Customer WHERE CustomerFirstName = 'Customer 5')
 BEGIN
 	INSERT INTO [External].Customer(CustomerFirstName, CustomerLastName, CustomerIdType, CustomerOutsourceId) 
 	VALUES ('Customer 5', 'LastName 5', 'Passport', 'C000005')

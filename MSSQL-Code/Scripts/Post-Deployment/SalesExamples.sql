@@ -19,7 +19,7 @@ BEGIN
 
 	SELECT @CustomerId = CustomerId
 	FROM [External].Customer
-	WHERE CustomerName = 'Customer 1';
+	WHERE CustomerFirstName = 'Customer 1';
 
 	-------------------------------------------2021------------------------------------------------
 	--------------------------------------January Sales--------------------------------------------
@@ -169,7 +169,7 @@ BEGIN
 
 	SELECT @CustomerId = CustomerId
 	FROM [External].Customer
-	WHERE CustomerName = 'Customer 2';
+	WHERE CustomerFirstName = 'Customer 2';
 
 	-------------------------------------------2021------------------------------------------------
 	--------------------------------------January Sales--------------------------------------------
@@ -302,7 +302,7 @@ BEGIN
 
 	SELECT @CustomerId = CustomerId
 	FROM [External].Customer
-	WHERE CustomerName = 'Customer 3';
+	WHERE CustomerFirstName = 'Customer 3';
 
 	-------------------------------------------2021------------------------------------------------
 	--------------------------------------January Sales--------------------------------------------
@@ -454,7 +454,7 @@ BEGIN
 
 	SELECT @CustomerId = CustomerId
 	FROM [External].Customer
-	WHERE CustomerName = 'Customer 1';
+	WHERE CustomerFirstName = 'Customer 1';
 
 	-------------------------------------------2021------------------------------------------------
 	--------------------------------------January Sales--------------------------------------------
@@ -572,7 +572,7 @@ BEGIN
 
 	SELECT @CustomerId = CustomerId
 	FROM [External].Customer
-	WHERE CustomerName = 'Customer 4';
+	WHERE CustomerFirstName = 'Customer 4';
 
 	-------------------------------------------2021------------------------------------------------
 	--------------------------------------January Sales--------------------------------------------
@@ -682,7 +682,7 @@ BEGIN
 
 	SELECT @CustomerId = CustomerId
 	FROM [External].Customer
-	WHERE CustomerName = 'Customer 5';
+	WHERE CustomerFirstName = 'Customer 5';
 
 	-------------------------------------------2021------------------------------------------------
 	--------------------------------------January Sales--------------------------------------------
