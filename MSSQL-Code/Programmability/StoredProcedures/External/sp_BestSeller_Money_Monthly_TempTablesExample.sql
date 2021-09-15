@@ -24,6 +24,7 @@ BEGIN
 	AND (@EndDate IS NULL OR S.SaleDate < @EndDatePlusOne)
 	GROUP BY SD.ProductId, EOMONTH(S.SaleDate)
 	
+	--Return the results
 	SELECT [Year] = YEAR(tmp.EndOfMonth), [Month] = DATENAME(MONTH, tmp.EndOfMonth),C.CategoryName, P.ProductName, tmp.TotalProductsSold
 	FROM #tmpSumTotalSold tmp 
 	JOIN Product P ON P.ProductId = tmp.ProductId

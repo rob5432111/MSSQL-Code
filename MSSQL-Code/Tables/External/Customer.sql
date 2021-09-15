@@ -1,9 +1,10 @@
 ﻿CREATE TABLE [External].[Customer]
 (
 	[CustomerId]			INT				NOT NULL IDENTITY(1,1),
-	[CustomerName]			VARCHAR(250)	NOT NULL,
-	[CustomerOutsourceId]	VARCHAR(25)		NULL,
+	[CustomerFirstName]		VARCHAR(50)		NOT NULL,
+	[CustomerLastName]		VARCHAR(50)		NOT NULL,
 	[CustomerIdType]		VARCHAR(25)		NULL,
+	[CustomerOutsourceId]	VARCHAR(25)		NULL,	
 	CONSTRAINT PK_Customer PRIMARY KEY (CustomerId)
 )
 GO
@@ -15,7 +16,8 @@ ON [External].Customer
 )
 INCLUDE 
 (
-	CustomerName
+	CustomerFirstName,
+	CustomerLastName
 )
 --Conditional Index to allow null values
 WHERE CustomerOutsourceId IS NOT NULL;

@@ -74,7 +74,7 @@
     <Folder Include="Scripts\Pre-Deployment" />
     <Folder Include="Security\Roles" />
     <Folder Include="Programmability\StoredProcedures\Internal" />
-    <Folder Include="Programmability\Functions\ScalarValuedFunctions\Internal" />
+    <Folder Include="Programmability\Functions\ScalarValuedFunctions\dbo" />
     <Folder Include="Publish" />
     <Folder Include="Synonyms" />
     <Folder Include="Programmability\StoredProcedures\External" />
@@ -106,6 +106,7 @@
     <Build Include="Synonyms\Customer.sql" />
     <Build Include="Programmability\StoredProcedures\External\sp_BestSeller_Quantity_Monthly_CTEExample.sql" />
     <Build Include="Programmability\StoredProcedures\External\sp_BestSeller_Money_Monthly_TempTablesExample.sql" />
+    <Build Include="Programmability\Functions\ScalarValuedFunctions\dbo\svf_FormatName.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />
