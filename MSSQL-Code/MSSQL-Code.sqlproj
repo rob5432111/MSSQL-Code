@@ -117,6 +117,10 @@
     <Build Include="Programmability\StoredProcedures\dbo\sp_DeadLockExample_Select.sql" />
     <Build Include="Programmability\StoredProcedures\dbo\sp_DeadLockExample_Update.sql" />
     <Build Include="Tables\dbo\DeadLockTable.sql" />
+    <Build Include="Security\Logins\DW_Login.sql" />
+    <Build Include="Security\Roles\DW_Role.sql" />
+    <Build Include="Security\Schemas\DW.sql" />
+    <Build Include="Security\Users\DW_User.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />

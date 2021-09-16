@@ -17,5 +17,5 @@ GO
 
 
 --GRANT DB ROLE MEMBERSHIP
-EXEC sp_addrolemember N'db_owner', [External_User];
+EXEC sp_addrolemember N'External_Role', [External_User];
 GO
