@@ -81,6 +81,7 @@
     <Folder Include="Programmability\Functions\TableValuedFunctions\dbo" />
     <Folder Include="Programmability\StoredProcedures\dbo" />
     <Folder Include="Tables\dbo" />
+    <Folder Include="Tables\DW" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Schemas\Internal.sql" />
@@ -121,6 +122,8 @@
     <Build Include="Security\Roles\DW_Role.sql" />
     <Build Include="Security\Schemas\DW.sql" />
     <Build Include="Security\Users\DW_User.sql" />
+    <Build Include="Tables\DW\SSISLogging.sql" />
+    <Build Include="Programmability\StoredProcedures\External\sp_BasicExamples.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Logins\Internal_Login.sql" />

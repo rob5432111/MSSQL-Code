@@ -1,8 +1,8 @@
 ﻿CREATE TABLE [Internal].[Salary]
 (
 	[SalaryId]				INT				NOT NULL IDENTITY(1,1),
-	[AppUserId]				INT				NOT NULL,
-	[SalaryAmount]			DECIMAL(9,1)	NOT NULL,
+	[AppUserId]				INT				NOT NULL,	
+	[SalaryAmount]			DECIMAL(9,1)	NOT NULL,	
 	[SalaryStartDate]		DATETIME2(3)	NOT NULL CONSTRAINT DF_Salary_SalaryStartDate DEFAULT GETDATE()  ,
 	[SalaryEndDate]			DATETIME2(3)	NULL,
 	[AuditStartDate]		DATETIME2(3)	GENERATED ALWAYS AS ROW START CONSTRAINT DF_Salary_AuditStartDate DEFAULT GETDATE(),

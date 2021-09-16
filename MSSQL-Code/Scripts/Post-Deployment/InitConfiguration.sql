@@ -85,26 +85,26 @@ DECLARE @Password VARCHAR(50) = 'Password';
 
 IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser WHERE AppUserName = 'Admin 1')
 BEGIN
-	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType) 
-	VALUES ('Admin 1', 0xD, 'Admin')
+	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType, AppUserCountry) 
+	VALUES ('Admin 1', 0xD, 'Admin', 'USA')
 END
 
 IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser WHERE AppUserName = 'Saler 1')
 BEGIN
-	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType) 
-	VALUES ('Saler 1', 0xD, 'Saler')
+	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType, AppUserCountry) 
+	VALUES ('Saler 1', 0xD, 'Saler', 'Equateur')
 END
 
 IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser WHERE AppUserName = 'Saler 2')
 BEGIN
-	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType) 
-	VALUES ('Saler 2', 0xD, 'Saler')
+	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType, AppUserCountry) 
+	VALUES ('Saler 2', 0xD, 'Saler', 'USA')
 END
 
 IF NOT EXISTS(SELECT TOP 1 'Exists' FROM [Internal].AppUser WHERE AppUserName = 'Manager 1')
 BEGIN
-	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType) 
-	VALUES ('Manager 1', 0xD, 'Manager')
+	INSERT INTO [Internal].AppUser(AppUserName, PasswordHash, AppUserType, AppUserCountry) 
+	VALUES ('Manager 1', 0xD, 'Manager', 'Canada')
 END
 GO
 

@@ -17,5 +17,8 @@ GO
 
 
 --GRANT DB ROLE MEMBERSHIP
+EXEC sp_addrolemember N'db_owner', [DW_User];
+GO
+
 EXEC sp_addrolemember N'DW_Role', [DW_User];
 GO
